@@ -23,9 +23,10 @@ class TUOAuth2(BaseOAuth2):
 
     def get_user_details(self, response):
         res = {'username': response.get('username'),
-                    'email': response.get('tumail') or '',
+                    'email': response.get('tumail') or response.get('staffmail') or response.get('email') or '',
                     'first_name': response.get('firstname'),
                     'last_name': response.get('lastname'),
+                    'name': response.get('fullname'),
                 }
         return res
 
