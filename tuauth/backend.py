@@ -27,6 +27,7 @@ class TUOAuth2(BaseOAuth2):
                     'first_name': response.get('firstname'),
                     'last_name': response.get('lastname'),
                     'name': response.get('fullname'),
+                    'fullname': response.get('fullname'),
                 }
         return res
 
