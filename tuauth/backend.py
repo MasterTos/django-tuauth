@@ -37,3 +37,6 @@ class TUOAuth2(BaseOAuth2):
                         
     def _user_data(self, access_token, path=None):
         return self.get_json(self.USER_DATA_URL, params={'access_token': access_token})
+    
+class TUOAuth2_2(TUOAuth2):
+    name = 'tu2'
